@@ -1,0 +1,17 @@
+= simple_form_for(resource, as: resource_name, url: session_path(resource_name), wrapper: :centric_input, html:{class:'form-validate b0 card', id:'user-login'}) do |f|
+  .card-offset.pb0
+    .card-offset-item.text-right.hidden
+      .btn.btn-success.btn-circle.btn-lg
+        %em.ion-checkmark-round
+  .card-heading
+    .card-title.text-center= t('.login')
+  .card-body
+    .mda-form-group.float-label.mda-input-group
+      = f.input :email, autofocus: true
+      %span.mda-input-group-addon
+        %em.ion-ios-email-outline.icon-lg
+    .mda-form-group.float-label.mda-input-group
+      = f.input :password, autocomplete: "off"
+      %span.mda-input-group-addon
+        %em.ion-ios-locked-outline.icon-lg
+  = f.button :submit, t('.authenticate'), class: "btn btn-primary btn-flat"

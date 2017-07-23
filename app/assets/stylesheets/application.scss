@@ -1,1 +1,43 @@
-@import "bootstrap";
+/* This is a manifest file
+ *
+ *= require_self
+ */
+
+@charset 'UTF-8';
+
+// THEME
+@import 'centric/centric';
+
+// UTILS
+@import
+  'utils/variables',
+  'utils/utilities',
+  'utils/mixins';
+
+// BASE
+@import
+  'base/base',
+  'base/helpers';
+
+// OBJECTS
+// @import
+//   'objects/media',
+//   'objects/list';
+
+// LAYOUT
+@import
+  'layout/header',
+  'layout/sidebar',
+  'layout/footer';
+
+// COMPONENTS
+@import
+  'components/pagination',
+  'components/boolean';
+
+// PAGES
+@import 'pages/home';
+
+// SHAME
+@import
+  'utils/shame';

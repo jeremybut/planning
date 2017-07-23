@@ -1,0 +1,19 @@
+a, a:focus, a:hover{
+  text-decoration: none;
+}
+
+.wizard > .content > .body ul > li {
+    list-style: none; 
+}
+
+.error {
+  color: #F44336;
+}
+
+ul.error_messages {
+  padding-left: 0;
+}
+
+.error_messages li {
+  list-style: none;
+}

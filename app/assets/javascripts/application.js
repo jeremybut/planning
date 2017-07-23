@@ -1,5 +1,4 @@
 //= require jquery
-//= require bootstrap
+//= require centric/centric
 //= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+//= require_self

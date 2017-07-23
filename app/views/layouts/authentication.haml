@@ -1,0 +1,21 @@
+!!!
+%html
+  %head
+    %meta{charset: 'utf-8'}
+    %meta{content: 'width=device-width, initial-scale=1, maximum-scale=1', name: 'viewport'}
+
+    %title Planning - Login
+
+    = stylesheet_link_tag 'application', media: 'all'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+
+  %body.devise
+    .layout-container
+      .page-container.bg-blue-grey-900
+        .container-full
+          .container.container-xs
+            = devise_error_messages!
+            = render 'shared/messages'
+            = yield
+            = yield :javascript_tag

@@ -1,0 +1,11 @@
+.theme-1 .layout-container > aside > .sidebar-header {
+  background: $primary-color;
+}
+
+.sidebar-header > .sidebar-header-logo > img,
+.sidebar-header > .sidebar-header-logo > svg {
+  width: 200px;
+  height: auto;
+  vertical-align: middle;
+  margin-bottom: 4px;
+}

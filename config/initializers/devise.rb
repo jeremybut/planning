@@ -13,4 +13,7 @@ Devise.setup do |config|
   config.email_regexp = /\A[^@\s]+@[^@\s]+\z/
   config.reset_password_within = 6.hours
   config.sign_out_via = :delete
+  Rails.application.config.to_prepare do
+    Devise::SessionsController.layout 'authentication'
+  end
 end

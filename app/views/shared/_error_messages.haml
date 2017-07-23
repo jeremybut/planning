@@ -1,0 +1,9 @@
+- if object.errors.any?
+  .card
+    .card-heading.pb0
+      .card-title.error= t('errors.messages.form_errors')
+    .card-body
+      %ul.error_messages
+        - object.errors.full_messages.each do |msg|
+          %li.error
+            * #{msg}

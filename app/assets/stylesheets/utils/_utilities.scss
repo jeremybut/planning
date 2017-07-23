@@ -1,0 +1,42 @@
+// UTILITIES
+// define all rules that help dev to design pages
+
+.bg-alert-danger {
+  background: $red;
+  color: #fff;
+}
+
+.wizard > .content > .body {
+  float: none;
+  position: static;
+  width: auto;
+  height: auto;
+}
+
+.wizard > .content {
+  min-height: auto;
+}
+
+section .alert {
+  border-radius: 0px;
+}
+
+.alert {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.alert-notice {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+ }
+
+.alert li {
+  list-style: none;
+}
+
+.u-padded-bottom {
+  padding-bottom: 16px;
+}

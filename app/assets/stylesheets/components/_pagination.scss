@@ -1,0 +1,12 @@
+.pagination > .active > a,
+.pagination > .active > a:focus,
+.pagination > .active > a:hover {
+  background-color: $primary-color;
+  border-color: $primary-color;
+}
+
+.pagination > li > a:focus,
+.pagination > li > a:hover {
+  background-color: $primary-color;
+  border-color: $primary-color;
+}

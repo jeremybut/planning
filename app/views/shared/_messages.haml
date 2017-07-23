@@ -1,0 +1,4 @@
+- flash.each do |key, value|
+  %div{class: "#{flash_class(key)} p pr-xl alert-dismissable"}
+    %button.close{"aria-hidden" => "", "data-dismiss" => "alert"} ×
+    %p= value

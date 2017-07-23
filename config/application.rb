@@ -2,17 +2,33 @@ require_relative 'boot'
 
 require 'rails/all'
 
-# Require the gems listed in Gemfile, including any gems
-# you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
 module Planning
   class Application < Rails::Application
-    # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
 
-    # Settings in config/environments/* take precedence over those specified here.
-    # Application configuration should go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded.
+    # I18n locales
+    I18n.enforce_available_locales = false
+    I18n.config.available_locales = :fr
+    config.i18n.default_locale = :fr
+    config.i18n.fallbacks = [:fr]
+
+    # Assets Paths
+    config.assets.precompile = %w(manifest.js)
+
+    config.assets.paths << Rails.root
+                           .join('app', 'assets', 'fonts', 'lib', 'vendor')
+
+    config.autoload_paths += Dir[Rails.root.join('lib').to_s,
+                                 Rails.root.join(
+                                   'app', 'models', 'concerns'
+                                 ).to_s]
+
+    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
+
+    Dir.glob("#{Rails.root}/vendor/assets/**/").each do |path|
+      config.assets.paths << path
+    end
   end
 end
