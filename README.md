@@ -1,24 +1,37 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Application of automated calculation of employee schedules spread over several areas.
 
-Things you may want to cover:
+Area Name 1 = Laxou
+Area Name 2 = Saint Seb
 
-* Ruby version
+Area Hours 1 = 9.30am - 8pm
+Area Hours 2 = 9:30 am - 7:30 pm
 
-* System dependencies
+Open from Monday to Saturday
 
-* Configuration
+The number of hours of each employee must be respected
 
-* Database creation
+Example:
+- Justine = 25h
+- Johanna = 25h
+- Elsa = 30h
+- Julie = 30h
+- Mylene = 30h
+- Adeline = 25h
 
-* Database initialization
+Every employee must have a day off
 
-* How to run the test suite
+The distribution of an employee on both areas must be equitable and follow each other, eg:
+- Area 1 = 2 days
+- Area 2 = 3 days
 
-* Services (job queues, cache servers, search engines, etc.)
+Special features:
+Area 1 = For Thursdays and Fridays from 12h to 18h
+Area 2 = For Fridays and Saturdays from 12 to 19.30
 
-* Deployment instructions
+Hours worked must be glued to the opening or closing of the site
+or
+On the return of Thursdays, Fridays from 12h to 20h
 
-* ...
+Salaries have 30 min rest for 7h of work
