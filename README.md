@@ -30,8 +30,8 @@ Special features:
 Area 1 = For Thursdays and Fridays from 12h to 18h
 Area 2 = For Fridays and Saturdays from 12 to 19.30
 
-Hours worked must be glued to the opening or closing of the site
+Hours worked must be glued to the opening or closing of the area
 or
 On the return of Thursdays, Fridays from 12h to 20h
 
-Salaries have 30 min rest for 7h of work
+Employees must have 30 min rest for 7h of work
