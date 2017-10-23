@@ -1,6 +1,7 @@
 /* This is a manifest file
  *
  *= require_self
+ *= require fullcalendar
  */
 
 @charset 'UTF-8';
@@ -18,11 +19,6 @@
 @import
   'base/base',
   'base/helpers';
-
-// OBJECTS
-// @import
-//   'objects/media',
-//   'objects/list';
 
 // LAYOUT
 @import

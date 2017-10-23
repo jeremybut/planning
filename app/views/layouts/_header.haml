@@ -1,4 +1,4 @@
-%header.header-container
+%header.header-container.full
   %nav.pr
     %ul.visible-xs
       %li
@@ -10,4 +10,11 @@
         %a#offcanvas-toggler.menu-link.menu-link-slide{href: "#"}
           %span
             %em
-    %h2.header-title= t('dashboard')
+    %ul.pull-left
+      = link_to root_path, class: 'sidebar-header-logo' do
+        %h4 Planning
+    %ul.pull-right
+      %li
+        = link_to destroy_user_session_path, method: :delete do
+          %em.ion-log-out.icon-fw>
+          = t('menu.label.logout')

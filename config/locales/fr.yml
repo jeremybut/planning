@@ -1,4 +1,7 @@
 fr:
+  menu:
+    label:
+      logout: Déconnexion
   activerecord:
     errors:
       messages:
@@ -229,3 +232,8 @@ fr:
     sessions:
       new:
         authenticate: 'Connexion'
+      user:
+        signed_in: 'Connecté avec succès'
+    failure:
+      user:
+        unauthenticated: "Vous n'êtes pas connecté"

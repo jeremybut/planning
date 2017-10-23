@@ -1,6 +1,220 @@
 // _header.scss
 // define all rules for header
+#bs-header-navbar-collapse-1 {
+  padding-left: 0;
+}
 
-.theme-1 .layout-container > header {
+.theme-2 .layout-container > header {
   background: $primary-color;
+  color: white;
+  margin: 0 !important;
+}
+
+.theme-2 .layout-container > aside {
+  background: $primary-color;
+  color: white;
+  font-weight: 0;
+}
+
+.sidebar-toolbar img {
+  width: 150px;
+}
+
+.bg-orange {
+  background-color: #F6633C;
+}
+
+.sidebar-header-logo img {
+  height: 31px;
+  margin-left: 15px;
+}
+
+.auth-header-logo img {
+  height: 45px;
+}
+
+.header-container > nav {
+  min-height: 59px;
+  height: 59px;
+  line-height: 59px;
+}
+
+.navbar-nav > li {
+  margin-right: 10px;
+}
+
+.navbar-nav > li > a {
+    padding-top: 24px;
+    padding-bottom: 15px;
+}
+
+.navbar-nav > li > a:hover {
+  color: #283E4B;
+  background-color: #f4f4f4;
+}
+
+.navbar-nav > li > a.active {
+  background-color: #f4f4f4;
+}
+
+.dropdown-menu{
+    -webkit-box-shadow: none;
+    box-shadow:none;
+}
+
+.navbar-toggle .icon-bar{
+    color: #fff;
+    background: #fff;
+}
+
+.header-container.full.sub-nav {
+  background-color: #5194b8;
+  color: white;
+  height: 55px;
+  position: relative;
+  margin: 0 !important;
+  z-index: 0;
+}
+
+.header-container.full.sub-nav > li > a:hover{
+  color: #F6633C;
+}
+
+.nav-tabs.sub-nav > li > a.active,
+.nav-tabs.sub-nav > li > a:hover {
+  border-bottom: 3px solid #fff;
+}
+
+.primary-nav {
+  color: #283E4B;
+  font-size: 16px;
+}
+
+.header-container em {
+  color: #283e4b;
+}
+
+#bs-header-navbar-collapse-1 {
+  @media screen and (max-width: 767px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999999999;
+    background-color: #fff;
+    padding: 48px 16px 16px 31px;
+    text-align: center;
+
+    &.active {
+      display: block;
+    }
+  }
+}
+
+.close-menu {
+  position: absolute;
+  top: 0;
+  right: 16px;
+  padding: 8px;
+  font-size: 2em;
+  cursor: pointer;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.dropdown-toggle > span {
+  display: none;
+
+  @media screen and (min-width: 880px) {
+    display: inline;
+  }
+}
+
+.gantt-date__box{
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    margin: 23px 0px;
+    width: 390px;
+  }
+}
+
+.impression-date{
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
+}
+
+.gantt-desktop {
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+}
+
+.gantt-desktop {
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.gantt-mobile {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.gantt-mobile {
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+}
+
+
+.layout-container {
+  > .header-container {
+    position: relative;
+    z-index: 1;
+  }
+
+  > main {
+    position: relative;
+    z-index: 0;
+  }
+}
+
+.header-container.full.sub-nav{
+  @media screen and (max-width: 768px) {
+    height: auto;
+  }
+}
+
+.nav-tabs.nav-justified.sub-nav > li {
+  @media screen and (max-width: 768px) {
+    display: inline-block;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: inline-table;
+  }
+}
+
+.c-title-input {
+  @media screen and (max-width: 768px) {
+    clear: right;
+    float: left !important;
+  }
+}
+
+.sidebar-header-logo h4 {
+  color: white;
+  margin-top: 12px;
+  margin-left: 12px;
+}
+
+.header-container > nav > ul > li > a > em {
+  vertical-align: -18%;
+  color: white;
 }

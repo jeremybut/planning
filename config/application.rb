@@ -15,17 +15,17 @@ module Planning
     config.i18n.fallbacks = [:fr]
 
     # Assets Paths
-    config.assets.precompile = %w(manifest.js)
+    config.assets.precompile = %w[manifest.js]
 
     config.assets.paths << Rails.root
-                           .join('app', 'assets', 'fonts', 'lib', 'vendor')
+                                .join('app', 'assets', 'fonts', 'lib', 'vendor')
 
     config.autoload_paths += Dir[Rails.root.join('lib').to_s,
                                  Rails.root.join(
                                    'app', 'models', 'concerns'
                                  ).to_s]
 
-    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
+    config.assets.precompile += %w[*.png *.jpg *.jpeg *.gif]
 
     Dir.glob("#{Rails.root}/vendor/assets/**/").each do |path|
       config.assets.paths << path

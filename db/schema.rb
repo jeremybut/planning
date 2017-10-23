@@ -10,10 +10,47 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170722100840) do
+ActiveRecord::Schema.define(version: 20170814171037) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "areas", force: :cascade do |t|
+    t.string "display_name"
+    t.string "color"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "business_hours", force: :cascade do |t|
+    t.bigint "area_id"
+    t.time "opens"
+    t.time "closes"
+    t.integer "day"
+    t.integer "max_employee"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["area_id"], name: "index_business_hours_on_area_id"
+  end
+
+  create_table "employees", force: :cascade do |t|
+    t.string "display_name"
+    t.integer "work_time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string "display_name"
+    t.bigint "area_id"
+    t.bigint "employee_id"
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["area_id"], name: "index_events_on_area_id"
+    t.index ["employee_id"], name: "index_events_on_employee_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -32,4 +69,7 @@ ActiveRecord::Schema.define(version: 20170722100840) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "business_hours", "areas"
+  add_foreign_key "events", "areas"
+  add_foreign_key "events", "employees"
 end

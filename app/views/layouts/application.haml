@@ -1,20 +1,19 @@
 !!!
 %html
   %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
-    %meta{name: "viewport", content: "width=device-width, initial-scale=1.0"}
+    %meta{content: 'text/html; charset=UTF-8', 'http-equiv' => "Content-Type"}
+    %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
 
     %title Planning
 
     = stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag 'application'
     = csrf_meta_tags
-  %body.theme-7
+  %body.theme-2
     .layout-container
 
       = render 'layouts/header'
-      = render 'layouts/sidebar'
-      %main.main-container
+      %main
         %section
           = render 'shared/messages'
           = yield
